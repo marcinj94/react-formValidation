@@ -3,10 +3,9 @@ import React from 'react';
 const Form = (props) => {
 
     const { username, surname, email, password, accept } = props.state;
-    console.log(username);
 
     return (
-        <form noValidate>
+        <form noValidate onSubmit={props.submit}>
             <label htmlFor="name">
                 Name:
                 <input type="text" name="username" id="name" onChange={props.change} value={username} />

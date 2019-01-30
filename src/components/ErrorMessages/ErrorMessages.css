@@ -1,0 +1,10 @@
+.errorMessages {
+    margin: 20px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+span {
+    display: block;
+    margin: 5px;
+}
