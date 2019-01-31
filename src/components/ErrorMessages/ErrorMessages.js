@@ -9,6 +9,7 @@ const ErrorMessages = (props) => {
 
     const value = (username || surname || email || password || accept) ?
         <div className="errorMessages">
+            <h2 className="errorMessages__title">Something went wrong!</h2>
             {username && <span>{wrongUsername}</span>}
             {surname && <span>{wrongSurname}</span>}
             {email && <span>{wrongEmail}</span>}

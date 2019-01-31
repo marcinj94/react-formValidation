@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import Form from './Form/Form'
+import Form from './Form/Form';
+import './App.css'
 import ErrorMessages from './ErrorMessages/ErrorMessages';
 import SendMessage from './SendMessage/SendMessage';
 
@@ -143,7 +143,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
+
+        <h1 className="app__title">Simple React.js Form Validation</h1>
 
         <ErrorMessages
           errors={this.state.errors}
