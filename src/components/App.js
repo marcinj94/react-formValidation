@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './Form/Form'
 import ErrorMessages from './ErrorMessages/ErrorMessages';
+import SendMessage from './SendMessage/SendMessage';
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
     email: '',
     password: '',
     accept: false,
+    message: '',
     errors: {
       username: false,
       surname: false,
@@ -106,6 +108,7 @@ class App extends Component {
         email: '',
         password: '',
         accept: false,
+        message: 'Registration complete!',
         errors: {
           username: false,
           surname: false,
@@ -128,6 +131,16 @@ class App extends Component {
     }
   }
 
+  componentDidUpdate() {
+    if (this.state.message !== '') {
+      setTimeout(() => (
+        this.setState({
+          message: '',
+        })
+      ), 2000)
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -141,6 +154,10 @@ class App extends Component {
           state={this.state}
           change={this.handleChange}
           submit={this.handleSubmit}
+        />
+
+        <SendMessage
+          message={this.state.message}
         />
       </div>
     );
